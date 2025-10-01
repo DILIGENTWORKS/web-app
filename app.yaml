@@ -25,6 +25,6 @@ handlers:
 env_variables:
   # Set these in your local app.yaml or via Cloud Console as needed
   APP_NAME: "DiligentWorks"
-  TO_EMAIL: "sales@yourdomain.com"      # change to your address
-  FROM_EMAIL: "no-reply@yourdomain.com" # must be a verified sender in your mail provider
+  TO_EMAIL: "info.diligentworks@gmail.com"      # change to your address
+  FROM_EMAIL: "info.diligentworks@gmail.com"    # must be a verified/allowed sender
   # SENDGRID_API_KEY: ""                 # set if using SendGrid for email
