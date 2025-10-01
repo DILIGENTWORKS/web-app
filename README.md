@@ -1,6 +1,6 @@
 # DiligentWorks – Static Site (Solutions & Managed Services)
 
-This is a lightweight static site for DiligentWorks, inspired by the structure of phoenixs.co.uk but fully rebranded and built from scratch with royalty‑free images.
+This is a lightweight static site for DiligentWorks and built from scratch with royalty‑free images.
 
 - Single page `index.html`
 - Responsive styles in `assets/css/styles.css`
