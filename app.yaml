@@ -1,0 +1,30 @@
+runtime: php82
+entrypoint: serve index.html
+
+handlers:
+  # Serve static assets
+  - url: /assets
+    static_dir: assets
+
+  # Route the PHP contact endpoint
+  - url: /contact.php
+    script: auto
+
+  # Serve index.html at root
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  # Cache headers for static files (optional)
+  - url: /(.*\.(css|js|png|jpg|jpeg|gif|svg|ico))$
+    static_files: \1
+    upload: .*(\.(css|js|png|jpg|jpeg|gif|svg|ico))$
+    http_headers:
+      Cache-Control: public, max-age=31536000
+
+env_variables:
+  # Set these in your local app.yaml or via Cloud Console as needed
+  APP_NAME: "DiligentWorks"
+  TO_EMAIL: "sales@yourdomain.com"      # change to your address
+  FROM_EMAIL: "no-reply@yourdomain.com" # must be a verified sender in your mail provider
+  # SENDGRID_API_KEY: ""                 # set if using SendGrid for email
